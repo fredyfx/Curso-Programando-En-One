@@ -17,6 +17,9 @@ namespace ProgramandoEnOne
             int numero;
             string nombres;
             decimal cantidadDinero;
+            //=================================
+            //Estructuras Secuenciales
+            //=================================
             //Para escribir en pantalla:
             Console.WriteLine("Ingrese su nombre: ");
             //Para leer las variables:
@@ -29,7 +32,7 @@ namespace ProgramandoEnOne
             numero = int.Parse(Console.ReadLine());
             Console.Write("Cuanto dinero tiene en el bolsillo?: ");
             cantidadDinero = decimal.Parse(Console.ReadLine());
-            //Estructuras Secuenciales
+            
 
             //Cabe mencionar que esto
             //Estructuras Condicionales
