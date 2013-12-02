@@ -16,7 +16,7 @@ namespace ProgramandoEnOne
             string nombres;
             decimal cantidadDinero;
             //Para leer las variables:
-            // Variable = Lectura (se define el valor)
+            // Variable = Lectura (se establece el valor)
             //se necesita un Console.ReadLine();
             //
             nombres = Console.ReadLine();
