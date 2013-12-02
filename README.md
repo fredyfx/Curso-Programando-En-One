@@ -1,4 +1,7 @@
 Curso-Programando-En-One
 ========================
+Hola! mi nombre es Fredy, y vamos a programar! 
+Haremos uso de Visual Studio, emplearemos C#
 
-Desarrollaremos un curso basico de programacion haciendo uso de C#
+Nos vemos en www.fredyfx.com
+Saludos.
