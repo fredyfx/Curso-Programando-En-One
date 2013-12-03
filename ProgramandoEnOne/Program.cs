@@ -118,10 +118,36 @@ namespace ProgramandoEnOne
                 default:
                     Console.WriteLine("Has escrito algun numero diferente del 1 al 12");
                     break;
-            }         
-            //while
-            //dowhile
-            //for
+            }
+            //=================================
+            //Estructuras Repetitivas While
+            //=================================
+   
+
+            //=================================
+            //Estructuras Repetitivas Do-While
+            //=================================
+
+
+
+            //=================================
+            //Estructuras Repetitivas For
+            //=================================
+            for (int i = 1; i <= 5; i++)
+            {
+                Console.WriteLine(i);
+            }
+
+            //=================================
+            //Estructuras Repetitivas Foreach
+            //=================================
+
+
+
+            //=================================
+            //Arreglos
+            //=================================
+
             //Fin de la primera temporada
         }
     }
