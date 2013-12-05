@@ -191,7 +191,7 @@ namespace ProgramandoEnOne
             }
             Console.WriteLine("El subtotal a pagar es: {0}",sumatoria);
             Console.WriteLine("\n=================================");
-            Console.WriteLine("Arreglos,Arrays");
+            Console.WriteLine("Arreglos Simples/Unidimensionales");
             Console.WriteLine("=================================");
             //Declaración de un array
             string[] nombreCompleto;
@@ -203,10 +203,36 @@ namespace ProgramandoEnOne
             int[] array2 = new int[] { 1, 3, 5, 7, 9 };
             // Sintaxis alternativa
             int[] array3 = { 1, 2, 3, 4, 5, 6 };
+            //Para insertar elementos en el array1, emplearemos un for:
+            for (int j = 0; j < array1.Length; j++)
+            {
+                Console.Write("El valor en el indice {0}, es: ",j);
+                //Necesitamos conocer cual es el indice, para ello:
+                //arreglo[indice] = Valor
+                array1[j] = int.Parse(Console.ReadLine());
+            }
+            //Para mostrar los elementos, haremos uso de un foreach:
+            Console.WriteLine("Reportamos los valores del array2");
+            foreach(int number in array2)
+            {
+                Console.WriteLine(number);
+            }
+            Console.WriteLine("Reportamos los valores del array1");
+            foreach (int number in array1)
+            {
+                Console.WriteLine(number);
+            }
+           
+            Console.WriteLine("\n=================================");
+            Console.WriteLine("Arreglos Multiples/Bidimensionales");
+            Console.WriteLine("=================================");
             // Arreglo de 2 dimensiones
             int[,] multiDimensionalArray1 = new int[2, 3];
             // Declaramos y definimos los elementos
             int[,] multiDimensionalArray2 = { { 1, 2, 3 }, { 4, 5, 6 } };
+
+            //En progreso
+
             Console.ReadLine();
             
         }

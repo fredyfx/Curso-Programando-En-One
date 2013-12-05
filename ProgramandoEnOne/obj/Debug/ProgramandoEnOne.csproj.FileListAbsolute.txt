@@ -1,0 +1,5 @@
+C:\Users\Fredy\SkyDrive\Dev\CursoPEO\ProgramandoEnOne\bin\Debug\ProgramandoEnOne.exe
+C:\Users\Fredy\SkyDrive\Dev\CursoPEO\ProgramandoEnOne\bin\Debug\ProgramandoEnOne.pdb
+C:\Users\Fredy\SkyDrive\Dev\CursoPEO\ProgramandoEnOne\obj\Debug\ProgramandoEnOne.csprojResolveAssemblyReference.cache
+C:\Users\Fredy\SkyDrive\Dev\CursoPEO\ProgramandoEnOne\obj\Debug\ProgramandoEnOne.exe
+C:\Users\Fredy\SkyDrive\Dev\CursoPEO\ProgramandoEnOne\obj\Debug\ProgramandoEnOne.pdb
