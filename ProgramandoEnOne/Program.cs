@@ -32,7 +32,7 @@ namespace ProgramandoEnOne
             numero = int.Parse(Console.ReadLine());
             Console.Write("Cuanto dinero tiene en el bolsillo?: ");
             cantidadDinero = decimal.Parse(Console.ReadLine());
-            
+
             Console.WriteLine("=================================");
             Console.WriteLine("Estructuras Condicionales Simples");
             Console.WriteLine("=================================");
@@ -66,13 +66,15 @@ namespace ProgramandoEnOne
             nota = int.Parse(Console.ReadLine());
             if (nota >= 90)
             {
-                Console.WriteLine("Has obtenido una A"); 
-            }else if(nota<90 && nota >=80)
+                Console.WriteLine("Has obtenido una A");
+            }
+            else if (nota < 90 && nota >= 80)
             {
-                Console.WriteLine("Has obtenido una B"); 
-            }else if(nota<80 && nota >=70)
+                Console.WriteLine("Has obtenido una B");
+            }
+            else if (nota < 80 && nota >= 70)
             {
-                Console.WriteLine("Has obtenido una C"); 
+                Console.WriteLine("Has obtenido una C");
             }
 
             Console.WriteLine("\n===================================================");
@@ -123,7 +125,7 @@ namespace ProgramandoEnOne
                 default:
                     Console.WriteLine("Has escrito algun numero diferente del 1 al 12");
                     break;
-            }            
+            }
 
             Console.WriteLine("\n=================================");
             Console.WriteLine("Estructuras Repetitivas Do While");
@@ -137,7 +139,7 @@ namespace ProgramandoEnOne
             {
                 Console.WriteLine("Prestando atencion");
                 Console.Write("Estas aprendiendo? [S/N]: ");
-                respuesta = Console.ReadLine()[0];                
+                respuesta = Console.ReadLine()[0];
             } while (respuesta.Equals('s'));
             Console.WriteLine("Has dejado de prestar atencion");
 
@@ -147,18 +149,18 @@ namespace ProgramandoEnOne
             //De la cantidad de dinero que tienes, has decidido retirar del ATM
             //todo el dinero que puedas en billetes de 20            
             decimal dineroRetirado = 0;
-            int cantidadBilletes=0;
+            int cantidadBilletes = 0;
             while (20 <= cantidadDinero)
             {
                 dineroRetirado = dineroRetirado + 20;
                 cantidadDinero = cantidadDinero - 20;
                 //Aumentamos nuestro contador:
-                cantidadBilletes++;           
+                cantidadBilletes++;
                 //la linea anterior equivale a cantidadBilletes = cantidadBilletes + 1;
             }
             //Para que sea sencillo redactar los mensajes con variables, se emplea {} y dentro el indice
-            Console.WriteLine("Has retirado: {0} en {1} billetes de $20 ",dineroRetirado,cantidadBilletes);
-            
+            Console.WriteLine("Has retirado: {0} en {1} billetes de $20 ", dineroRetirado, cantidadBilletes);
+
             Console.WriteLine("\n=================================");
             Console.WriteLine("Estructuras Repetitivas For");
             Console.WriteLine("=================================");
@@ -170,7 +172,7 @@ namespace ProgramandoEnOne
             cantidadProductos = int.Parse(Console.ReadLine());
             for (int i = 1; i <= cantidadProductos; i++)
             {
-                Console.WriteLine("Se ha registrado el {0} producto",i);
+                Console.WriteLine("Se ha registrado el {0} producto", i);
             }
             //Ahora bien, para ver el foreach primero veremos: Arreglos
             //Para definir un arreglo se usa la siguiente sintaxis:
@@ -189,7 +191,7 @@ namespace ProgramandoEnOne
             {
                 sumatoria = sumatoria + precio;
             }
-            Console.WriteLine("El subtotal a pagar es: {0}",sumatoria);
+            Console.WriteLine("El subtotal a pagar es: {0}", sumatoria);
             Console.WriteLine("\n=================================");
             Console.WriteLine("Arreglos Simples/Unidimensionales");
             Console.WriteLine("=================================");
@@ -204,16 +206,18 @@ namespace ProgramandoEnOne
             // Sintaxis alternativa
             int[] array3 = { 1, 2, 3, 4, 5, 6 };
             //Para insertar elementos en el array1, emplearemos un for:
+            //en la condicion del for, se emplea la propiedad .Length para 
+            //conocer la longitud de elementos que tiene el arreglo.
             for (int j = 0; j < array1.Length; j++)
             {
-                Console.Write("El valor en el indice {0}, es: ",j);
+                Console.Write("El valor en el indice {0}, es: ", j);
                 //Necesitamos conocer cual es el indice, para ello:
                 //arreglo[indice] = Valor
                 array1[j] = int.Parse(Console.ReadLine());
             }
             //Para mostrar los elementos, haremos uso de un foreach:
             Console.WriteLine("Reportamos los valores del array2");
-            foreach(int number in array2)
+            foreach (int number in array2)
             {
                 Console.WriteLine(number);
             }
@@ -231,8 +235,79 @@ namespace ProgramandoEnOne
             // Declaramos y definimos los elementos
             int[,] multiDimensionalArray2 = { { 1, 2, 3 }, { 4, 5, 6 } };
 
-            //En progreso
+            //Para mostrar los datos de un arreglo multidimensional:
+            //Podemos hacer uso de 2 Fors -> con esto tenemos mayor control
+            for (int k = 0; k < multiDimensionalArray2.GetLength(0); k++)
+            {
+                Console.WriteLine("Valores de la fila: {0}", k);
+                for (int p = 0; p < multiDimensionalArray2.GetLength(1);p++)
+                {
+                    Console.Write(multiDimensionalArray2[k,p].ToString() + ", ");
+                }
+                Console.WriteLine();
+            }
+            Console.WriteLine("Haciendo uso de un foreach \t");
+            //Tambien podemos hacer uso de un foreach:
+            foreach (int valor in multiDimensionalArray2)
+            {
+                Console.Write("{0},",valor);
+            }
+            Console.WriteLine("Insertando elementos en el primero arreglo multidimensional");
+            //Ahora para insertar elementos en el arreglo multidimensional,
+            //es la misma situacion que en arreglos unidimensionales: 
+            //Necesitamos conocer los indices y listo.
+            //El arreglo "multiDimensionalArray1" tiene 2 filas y 3 columnas
+            for (int m = 0; m < multiDimensionalArray1.GetLength(0); m++)
+            {
+                for (int n = 0; n < multiDimensionalArray1.GetLength(1); n++)
+                {
+                    Console.Write("Ingrese el valor a registrar en {0},{1}: ",m,n);
+                    multiDimensionalArray1[m, n] = int.Parse(Console.ReadLine()); 
+                }
+            }
 
+            Console.WriteLine("\n=================================");
+            Console.WriteLine("Arreglos de Arreglos / JaggedArray");
+            Console.WriteLine("=================================");
+            //declaramos el arreglo de arreglos
+            int[][] jaggedArray = new int[2][];
+
+            jaggedArray[0] = new int[3];
+            jaggedArray[1] = new int[5];
+
+            jaggedArray[0] = new int[] { 3, 5, 7, };
+            jaggedArray[1] = new int[] { 1, 0, 2, 4, 6 };
+            //Una segunda manera de declarar un arreglo de arreglos:
+            //OJO donde va el punto y coma
+            int[][] jaggedArray2 = new int[][]
+            {
+                new int[] { 3, 5, 7, },
+                new int[] { 1, 0, 2, 4, 6 }
+            };
+            //Y hasta una tercera manera:
+            int[][] jaggedArray3 =
+            {
+                new int[] { 3, 5, 7, },
+                new int[] { 1, 0, 2, 4, 6 }
+            };
+            //El detalle está que siempre debemos usar el "new"
+            //Porque no existe una inicialización por default para los elementos.
+            //Y bueno, para mostrar los elementos hacemos lo siguiente:
+
+            // Display the array elements:
+            for (int a = 0; a < jaggedArray.Length; a++)
+            {
+                Console.Write("Element[{0}]: ", a);
+
+                for (int b = 0; b < jaggedArray[a].Length; b++)
+                {
+                    Console.Write("{0}{1}", jaggedArray[a][b], b == (jaggedArray[a].Length - 1) ? "" : " ");
+                    //Esta ultima parte es un if corto:
+                    //<Condicion a Evaluar> ? <Si es verdadero> : <Si es falso>;
+                }
+                Console.WriteLine();
+            }
+            
             Console.ReadLine();
             
         }
